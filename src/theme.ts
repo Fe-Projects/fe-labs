@@ -1,19 +1,44 @@
-import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import * as React from 'react';
+import { red, deepOrange, amber, grey } from '@mui/material/colors';
 
-// Create a theme instance.
-const theme = createTheme({
+const getDesignTokens = (mode) => ({
   palette: {
-    primary: {
-      main: '#556cd6',
-    },
-    secondary: {
-      main: '#19857b',
-    },
-    error: {
-      main: red.A400,
-    },
+    mode,
+    ...(mode === 'light'
+      ? {
+          // palette values for light mode
+          primary: {
+            main: '#004b58',
+          },
+          divider: '#004b58',
+          background: {
+            default: '#fff',
+            paper: deepOrange[900],
+          },
+          text: {
+            primary: '#08212d',
+            secondary: '#08212d',
+          },
+        }
+      : {
+          primary: {
+            main: '#CAF7FF'
+          },
+          divider: '#004b58',
+          background: {
+            default: '#08212d',
+            paper: deepOrange[900],
+          },
+          text: {
+            primary: '#fff',
+            secondary: '#fff',
+          },
+        }),
   },
 });
 
-export default theme;
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
+
+
+export { getDesignTokens, ColorModeContext}

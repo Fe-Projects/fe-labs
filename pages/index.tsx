@@ -4,11 +4,13 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '../src/Link';
+import Layout from '../src/Layout'
 import ProTip from '../src/ProTip';
 import Copyright from '../src/Copyright';
 
 const Home: NextPage = () => {
   return (
+    <Layout>
     <Container maxWidth="lg">
       <Box
         sx={{
@@ -29,6 +31,7 @@ const Home: NextPage = () => {
         <Copyright />
       </Box>
     </Container>
+    </Layout>
   );
 };
 
