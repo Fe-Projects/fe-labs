@@ -26,7 +26,7 @@ const Anchor = styled('a')<{ component?: React.ElementType; noLinkStyle?: boolea
     transition: theme.transitions.create('background'),
     '&:hover, &:focus': {
       backgroundColor:
-        theme.palette.mode === 'dark' ? theme.palette.primaryDark[700] : theme.palette.grey[100],
+        theme.palette.mode === 'dark' ? theme.palette.grey[700] : theme.palette.grey[100],
       // Reset on touch devices, it doesn't add specificity
       '@media (hover: none)': {
         backgroundColor: 'transparent',
@@ -107,28 +107,35 @@ export default function HeaderNavDropdown() {
               <li>
               <Link  href = "/">
                 <Anchor noLinkStyle>
-                  Docs
+                  Home
                 </Anchor>
               </Link>
               </li>
               <li>
-              <Link href = "/">
+              <Link href = "/thoughts">
                 <Anchor noLinkStyle>
-                  Pricing
+                  Thoughts
                 </Anchor>
               </Link>
               </li>
               <li>
-              <Link href = "/">
+              <Link href = "/recommendations">
                 <Anchor noLinkStyle>
-                  About us
+                  Recommendations
                 </Anchor>
               </Link>
               </li>
               <li>
-              <Link href = "/">
+              <Link href = "/projects">
                 <Anchor noLinkStyle>
-                  Blog
+                  Projects
+                </Anchor>
+              </Link>
+              </li>
+              <li>
+              <Link href = "/contact">
+                <Anchor noLinkStyle>
+                  Contact
                 </Anchor>
               </Link>
               </li>

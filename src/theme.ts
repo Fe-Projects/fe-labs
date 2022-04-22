@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { red, deepOrange, amber, grey } from '@mui/material/colors';
+import { blueGrey } from '@mui/material/colors';
 
-const getDesignTokens = (mode) => ({
+const getDesignTokens = (mode: any) => ({
   palette: {
     mode,
     ...(mode === 'light'
@@ -13,7 +13,7 @@ const getDesignTokens = (mode) => ({
           divider: '#004b58',
           background: {
             default: '#fff',
-            paper: deepOrange[900],
+            paper: blueGrey[100],
           },
           text: {
             primary: '#08212d',
@@ -27,7 +27,7 @@ const getDesignTokens = (mode) => ({
           divider: '#004b58',
           background: {
             default: '#08212d',
-            paper: deepOrange[900],
+            paper: blueGrey[800],
           },
           text: {
             primary: '#fff',
@@ -35,6 +35,11 @@ const getDesignTokens = (mode) => ({
           },
         }),
   },
+  typography: {
+    fontFamily: [
+      "Plus Jakarta Sans"
+    ].join(','),
+  }
 });
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });

@@ -6,6 +6,7 @@ import { useTheme } from '@mui/material/styles';
 type RootSvgProps<P = unknown> = Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
   sx?: SxProps<Theme>;
   ref?: React.Ref<SVGSVGElement>;
+  sc?: string;
 } & P;
 
 const RootSvg = styled('svg')({
@@ -17,10 +18,10 @@ const RootSvg = styled('svg')({
 
 
 export default function Logo(props: RootSvgProps) {
-
+  
   const theme = useTheme();
-  const sc = theme.palette.mode === 'dark' ? '#fff' : '#08212d';
-
+  const sccm = theme.palette.mode === 'dark' ? '#fff' : '#08212d';
+  let sc = props.sc ? props.sc : sccm;
   return (
     <RootSvg
       xmlns="http://www.w3.org/2000/svg"

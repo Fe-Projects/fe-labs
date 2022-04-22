@@ -16,7 +16,7 @@ import Zoom from '@mui/material/Zoom';
 import { ColorModeContext } from './theme';
 import Logo from './icons/Logo'
 
-function ScrollTop(props) {
+function ScrollTop(props: any) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -27,7 +27,7 @@ function ScrollTop(props) {
     threshold: 100,
   });
 
-  const handleClick = (event) => {
+  const handleClick = (event: any) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
       '#back-to-top-anchor',
     );
@@ -78,7 +78,7 @@ const Header = styled('header')(({ theme }) => ({
       : '#fff',
 }));
 
-export default function Navbar(props) {
+export default function Navbar(props: any) {
 
   
   const theme = useTheme();
@@ -86,11 +86,11 @@ export default function Navbar(props) {
 
   return (
     <React.Fragment>
-    <Header>
-       <Container sx={{ display: 'flex', alignItems: 'center', minHeight: 56 }}>
+    <Header >
+       <Container  sx={{ display: 'flex', alignItems: 'center', minHeight: 56 }}>
         <Box
           aria-label="Go to homepage"
-          sx={{ lineHeight: 0, mr: 2 }}
+          sx={{ lineHeight: 0, mr: 2, my: 2 }}
         >
           <Logo width={50} />
         </Box>
@@ -111,12 +111,11 @@ export default function Navbar(props) {
         </Box>
       </Container>
     </Header>
-      <Toolbar id="back-to-top-anchor" />
-      <ScrollTop {...props}>
+      {/*<ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
-      </ScrollTop>
+      </ScrollTop>*/}
     </React.Fragment>
   );
 }

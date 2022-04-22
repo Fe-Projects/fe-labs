@@ -19,8 +19,8 @@ const Navigation = styled('nav')(({ theme }) => ({
       textDecoration: 'none',
       paddingTop: theme.spacing(1),
       paddingBottom: theme.spacing(1),
-      paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2),
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
       borderRadius: '20px',
       '&:hover, &:focus': {
         backgroundColor:
@@ -51,13 +51,23 @@ export default function HeaderNavBar() {
           </Link>
         </li>
         <li role="none">
-          <Link href="/about">
-            About us
+          <Link href="/projects">
+            Projects
           </Link>
         </li>
         <li role="none">
-          <Link href="/blog">
-            Blog
+          <Link href="/thoughts">
+            Thoughts
+          </Link>
+        </li>
+        <li role="none">
+          <Link href="/recommendations">
+            Recommendations
+          </Link>
+        </li>
+        <li role="none">
+          <Link href="/contact">
+            Contact
           </Link>
         </li>
       </ul>
