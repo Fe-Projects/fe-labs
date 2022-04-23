@@ -7,6 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_BASE_PATH: /fe-labs
+
     steps:
       - name: Get files
         uses: actions/checkout@v3
