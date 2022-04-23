@@ -124,13 +124,6 @@ export default function Home() {
             >
               retro game enjoyer
             </Typography>
-            <Typography
-              sx={{ fontWeight: '700', opacity: 0.5 }}
-              variant="h3"
-              component="h3"
-            >
-              follow me
-            </Typography>
           </Box>
         </Box>
       </Container>
