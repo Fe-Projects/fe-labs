@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NEXT_PUBLIC_BASE_PATH: /fe-labs
+      NEXT_PUBLIC_BASE_PATH: /
 
     steps:
       - name: Get files
